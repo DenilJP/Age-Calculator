@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: green;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.txt-heading {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+    font-size: clamp(1vmax, 10vh, 3vmax);
+    font-weight: 600;
+    font-family: 'DM Serif Display', serif;
+    text-transform: uppercase;
+    letter-spacing: .5vmax;
+    color: #fff;
+}
+
+.calculator-body {
+    position: absolute;
+    background: #fff;
+    height: 50%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2vmax 3vmax;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px #333;
+}
+
+.calculator-body .calculator-body-txt {
+    text-align: center;
+    font-size: clamp(1vmax, 5vh, 2.5vmax);
+    font-weight: 600;
+    text-transform: capitalize;
+    color: green;
+    text-transform: uppercase;
+    letter-spacing: .2vmax;
+}
+
+.sub-container {
+    /* background: red; */
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vmax;
+}
+
+.input-box {
+    height: 3vmax;
+    width: 70%;
+    position: relative;
+    font-size: 1.4vmax;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 0px 5px #c9a4cd inset;
+    border-radius: 5px;
+    color: #0f1010;
+    cursor: pointer;
+}
+
+.btn {
+    height: 3vmax;
+    width: 20%;
+    font-size: 2vmax;
+    background: green;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+.margin {
+    margin-top: 3vmax;
+    /* background: red; */
+}
+
+.sub-container .box {
+    width: 30%;
+    /* background: #0d9595; */
+    text-align: center;
+    /* background-color: #ee33fe; */
+}
+
+.box .result {
+    font-size: 2vmax;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 600;
+}
+
+.box .result-txt {
+    font-size: 1.5vmax;
+    /* color: red; */
+    margin-top: 1vmax;
+    /* font-family: ; */
+    font-family: 'DM Serif Display', serif;
+    text-transform: uppercase;
+    letter-spacing: .3vmax;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+@media (max-width: 400px) {
+    .txt-heading {
+        position: relative;
+        font-size: 4vmax;
+        text-align: center;
+    }
+
+    .calculator-body {
+        width: 90%;
+        height: 40%;
+    }
+
+    .calculator-body .calculator-body-txt {
+        font-size: clamp(.7vmax, 5vh, 4.5vmax);
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: green;
+        text-transform: uppercase;
+        letter-spacing: .3vmax;
+    }
+
+    .sub-container {
+        /* background: red; */
+
+    }
+
+    .input-box {
+        height: 6vmax;
+        width: 60%;
+        font-size: clamp(.5vmax, 4vw, 4.4vmax);
+        color: black;
+        border-radius: 0;
+        box-shadow: none;
+        background: #c9a4cd;
+    }
+
+    .btn {
+        height: 6vmax;
+        width: 35%;
+        font-size: clamp(.7vmax, 9vw, 3vmax);
+    }
+
+    .box .result {
+        font-size: clamp(.7vmax, 5vh, 4.4vmax);
+        transition: .2s;
+    }
+
+    .box .result-txt {
+        font-size: clamp(.5vmax, 4vw, 4.4vmax);
+        /* color: red; */
+    }
+
+    .margin {
+        margin-top: 6vmax;
+    }
+}
+
+@media (min-width: 401px)and (max-width: 450px) {
+    .txt-heading {
+        position: relative;
+        text-align: center;
+        font-size: clamp(1vmax, 8vw, 5vmax);
+    }
+
+    .calculator-body {
+        width: 75%;
+        height: 40%;
+    }
+
+    .calculator-body .calculator-body-txt {
+        font-size: clamp(2vmax, 7vw, 5.5vmax);
+        /* * 2vmax,  5vh, 5.5vmax*/
+    }
+
+    .input-box {
+        height: 5vmax;
+        font-size: clamp(2vmax, 4vw, 3vmax);
+        /* * 2vmax, 4vw,  */
+    }
+
+    .btn {
+        height: 5vmax;
+        font-size: 3vmax;
+    }
+
+    .box .result-txt {
+        font-size: clamp(1vmax, 4vw, 1.7vmax);
+        /* font-size: 1vmax; */
+    }
+
+    .box .result {
+        font-size: clamp(2vmax, 3vh, 3vmax);
+    }
+
+    .margin {
+        margin-top: clamp(3vmax, 8vh, 9vmax);
+    }
+}
+
+@media (min-width: 451px) and (max-width: 780px) {
+    .calculator-body {
+        width: 70%;
+    }
+
+    .calculator-body .calculator-body-txt {
+        font-size: clamp(2vmax, 5vw, 5vmax);
+    }
+
+    .input-box {
+        height: 4vmax;
+        font-size: clamp(1.5vmax, 2.5vw, 2.5vmax);
+        /* & 2,5vw */
+        text-align: center;
+    }
+
+    .calculator-body {
+        /* background: red; */
+        height: 40%;
+    }
+
+    .btn {
+        height: 4vmax;
+    }
+
+    .margin {
+        margin-top: clamp(3vmax, 8vh, 9vmax);
+    }
+
+    
+    .box .result-txt {
+        font-size: clamp(1vmax, 4vw, 3vmax);
+    }
+
+    .box .result {
+        font-size: clamp(1vmax, 3vh, 3vmax);
+    }
+}
+
+@media (min-width: 781px) and (max-width: 1080px) {
+    .calculator-body {
+        width: 50%;
+        height: 40%;
+    }
+
+    .margin {
+        margin-top: clamp(3vmax, 8vh, 9vmax);
+    }
+}
